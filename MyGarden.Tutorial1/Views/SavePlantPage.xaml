@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MyGarden.Tutorial1.Views.SavePlantPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="保存" Clicked="OnSaveClicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout Padding="15">
+            <Label Text="植物名称" />
+            <Entry Text="{Binding Plant.Name}"/>
+
+            <Label Text="种类" />
+            <Entry Text="{Binding Plant.Type}" Margin="0" />
+
+            <Label Text="耐寒区"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Entry Text="{Binding Path=Plant.HardinessZoneMin}" 
+                        WidthRequest="50" Grid.Row="0" Grid.Column="0" />
+                <Label Text="-" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="1" />
+                <Entry Text="{Binding Path=Plant.HardinessZoneMax}" 
+                        WidthRequest="50" Grid.Row="0" Grid.Column="2" />
+            </Grid>
+            
+            <Label Text="植物高度" />
+            <Entry Text="{Binding Plant.PlantHeight}"/>
+
+            <Label Text="花期" />
+            <Label Text="暂不实现该功能"/>
+
+            <Label Text="花色"/>
+            <Label Text="暂不实现该功能" />
+
+            <Label Text="其他"/>
+            <Editor Text="{Binding Plant.Description}" HeightRequest="100"/>
+
+             <Label Text="图片" />
+             <FlexLayout x:Name="PhotoList" JustifyContent="Start" HeightRequest="100" >
+                 <Button Text="+" BorderColor="Gray" BorderWidth="1" Margin="1" HeightRequest="50" WidthRequest="50" Clicked="OnLoadImagePicker" />
+            </FlexLayout>          
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

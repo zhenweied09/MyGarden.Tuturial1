@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MyGarden.Tutorial1.Views.DetailPlantPage"
+             Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="修改" Clicked="OnModifyPlantClicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+         <ScrollView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="300"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="{Binding Plant.DisplayPhoto}" BackgroundColor="Black"
+                           HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+                           Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>   
+                    <Label Text="名称" Grid.Row="1" Grid.Column="0"/>
+                    <Label Text="{Binding Plant.Name}" Grid.Row="1" Grid.Column="1"/>
+                    <Label Text="种类" Grid.Row="2" Grid.Column="0"/>
+                    <Label Text="{Binding Plant.Type}" Grid.Row="2" Grid.Column="1"/>
+                    <Label Text="耐寒区" Grid.Row="3" Grid.Column="0"/>
+                    <Label Text="{Binding Plant.HardinessZone}" Grid.Row="3" Grid.Column="1"/>
+                    <Label Text="高度" Grid.Row="4" Grid.Column="0"/>
+                    <Label Text="{Binding Plant.PlantHeight}" Grid.Row="4" Grid.Column="1"/>
+                    <Label Text="花期" Grid.Row="5" Grid.Column="0"/>
+                    <Label Text="{Binding Plant.FlowerDate}" Grid.Row="5" Grid.Column="1"/>
+                    <Label Text="花色" Grid.Row="6" Grid.Column="0"/>
+                    <Label Text="暂不实现该功能" Grid.Row="6" Grid.Column="1"/>
+                    <Label Text="其他" Grid.Row="7" Grid.Column="0"/>
+                    <Label Text="{Binding Plant.Description}"  
+                           VerticalOptions="Start" HorizontalOptions="Start" Grid.Row="7" Grid.Column="1"/>
+                </Grid>
+           </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

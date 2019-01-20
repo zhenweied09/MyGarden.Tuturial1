@@ -1,0 +1,103 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
+    <PackageReference Include="Refractored.MvvmHelpers" Version="1.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Services\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\MyPage.xaml.cs" />
+    <Compile Remove="Views\ModifyPlantPage.xaml.cs" />
+    <Compile Remove="Views\ViewPlantPage.xaml.cs" />
+    <Compile Remove="Extensions\ColorExtensions.cs" />
+    <Compile Remove="Models\EmptyClass.cs" />
+    <Compile Remove="ViewModels\BasicViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\Photos\sample-bailixiang.JPG" />
+    <None Remove="Resources\Photos\sample-baizilian.png" />
+    <None Remove="Resources\Photos\sample-blueberry.jpg" />
+    <None Remove="Resources\Photos\sample-chaowucao.jpg" />
+    <None Remove="Resources\Photos\sample-chixiazhu.jpg" />
+    <None Remove="Resources\Photos\sample-chocolatemint.jpg" />
+    <None Remove="Resources\Photos\sample-clematis-hania.jpg" />
+    <None Remove="Resources\Photos\sample-clematis-mrscholmondeley.jpeg" />
+    <None Remove="Resources\Photos\sample-endlesssummer.jpeg" />
+    <None Remove="Resources\Photos\sample-goldenboxue.jpg" />
+    <None Remove="Resources\Photos\sample-heuchera.jpg" />
+    <None Remove="Resources\Photos\sample-lemon-youlike.jpg" />
+    <None Remove="Resources\Photos\sample-lihuang.jpg" />
+    <None Remove="Resources\Photos\sample-lupinus.jpg" />
+    <None Remove="Resources\Photos\sample-magelite-pink.jpg" />
+    <None Remove="Resources\Photos\sample-magelite-white.jpg" />
+    <None Remove="Resources\Photos\sample-pufumidiexiang.jpg" />
+    <None Remove="Resources\Photos\sample-qingganji.jpg" />
+    <None Remove="Resources\Photos\sample-raspberry.jpg" />
+    <None Remove="Resources\Photos\sample-rose-bienvenue.jpeg" />
+    <None Remove="Resources\Photos\sample-rose-florentina.jpg" />
+    <None Remove="Resources\Photos\sample-rose-honeycaramel.jpg" />
+    <None Remove="Resources\Photos\sample-rose-hotchocolate.jpg" />
+    <None Remove="Resources\Photos\sample-rose-littleedan.jpg" />
+    <None Remove="Resources\Photos\sample-rose-sweetchariot.jpg" />
+    <None Remove="Resources\Photos\sample-rudbeckia.jpeg" />
+    <None Remove="Resources\Photos\sample-shukui.jpg" />
+    <None Remove="Resources\Photos\sample-tianzukui.jpg" />
+    <None Remove="Resources\Photos\sample-wuhuaguo-xiaotianxin.jpg" />
+    <None Remove="Resources\Photos\sample-xiangmao.jpeg" />
+    <None Remove="Resources\Photos\sample-youganlan.jpg" />
+    <None Remove="Resources\Photos\sample-flower.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Photos\sample-bailixiang.JPG" />
+    <EmbeddedResource Include="Resources\Photos\sample-baizilian.png" />
+    <EmbeddedResource Include="Resources\Photos\sample-blueberry.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-chaowucao.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-chixiazhu.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-chocolatemint.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-clematis-hania.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-clematis-mrscholmondeley.jpeg" />
+    <EmbeddedResource Include="Resources\Photos\sample-endlesssummer.jpeg" />
+    <EmbeddedResource Include="Resources\Photos\sample-goldenboxue.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-heuchera.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-lemon-youlike.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-lihuang.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-lupinus.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-magelite-pink.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-magelite-white.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-pufumidiexiang.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-qingganji.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-raspberry.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-rose-bienvenue.jpeg" />
+    <EmbeddedResource Include="Resources\Photos\sample-rose-florentina.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-rose-honeycaramel.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-rose-hotchocolate.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-rose-littleedan.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-rose-sweetchariot.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-rudbeckia.jpeg" />
+    <EmbeddedResource Include="Resources\Photos\sample-shukui.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-tianzukui.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-wuhuaguo-xiaotianxin.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-xiangmao.jpeg" />
+    <EmbeddedResource Include="Resources\Photos\sample-youganlan.jpg" />
+    <EmbeddedResource Include="Resources\Photos\sample-flower.jpeg" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <StandardHeader IncludeInNewFiles="True" Text="&#xA;${FileName}&#xA; &#xA;Author:&#xA;      ${AuthorName} &lt;${AuthorEmail}&gt;&#xA;&#xA;Copyright (c) ${Year} ${CopyrightHolder}&#xA;&#xA;Permission is hereby granted, free of charge, to any person obtaining a copy&#xA;of this software and associated documentation files (the &quot;Software&quot;), to deal&#xA;in the Software without restriction, including without limitation the rights&#xA;to use, copy, modify, merge, publish, distribute, sublicense, and/or sell&#xA;copies of the Software, and to permit persons to whom the Software is&#xA;furnished to do so, subject to the following conditions:&#xA;&#xA;The above copyright notice and this permission notice shall be included in&#xA;all copies or substantial portions of the Software.&#xA;&#xA;THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR&#xA;IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,&#xA;FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE&#xA;AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER&#xA;LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,&#xA;OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN&#xA;THE SOFTWARE." />
+        </Policies>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+</Project>

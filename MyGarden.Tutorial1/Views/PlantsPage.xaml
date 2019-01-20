@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MyGarden.Tutorial1.Views.PlantsPage"
+             Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="新增" Clicked="OnAddPlantClicked">
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+         <StackLayout >
+            <ListView x:Name="PlantsListView" ItemsSource="{Binding Plants, Mode=TwoWay}" 
+                      VerticalOptions="FillAndExpand" HasUnevenRows="true" 
+                      RefreshCommand="{Binding LoadPlantsCommand}" IsPullToRefreshEnabled="true" 
+                      IsRefreshing="{Binding IsBusy, Mode=OneWay}" CachingStrategy="RecycleElement" 
+                      ItemSelected="OnItemSelected" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                             <ViewCell.ContextActions>
+                                    <MenuItem Clicked="OnDeletePlantClicked" Text="删除" IsDestructive="True" CommandParameter="{Binding .}"/>
+                                </ViewCell.ContextActions>
+                               <Grid Padding="10">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Source="{Binding DisplayPhoto}" Aspect="AspectFill" 
+                                           HeightRequest="50" WidthRequest="50" 
+                                           Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" />
+                                
+                                    <Label Text="{Binding Name}"  LineBreakMode="NoWrap" FontSize="16" 
+                                           VerticalOptions="Center" HorizontalOptions="Start"
+                                           Grid.ColumnSpan="4" Grid.Row="0" Grid.Column="1"/>
+
+                                    <Label Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="5"/>                          
+                                
+                                    <Label Text="耐寒区" FontSize="13" VerticalOptions="Center" HorizontalOptions="Start"
+                                           Grid.Row="1" Grid.Column="1"/> 
+                                    <Label Text="{Binding HardinessZone}" LineBreakMode="NoWrap" FontSize="13" 
+                                           VerticalOptions="Center" HorizontalOptions="Start"
+                                           Grid.Row="1" Grid.Column="2"/>
+
+                                    <Label Text="花期" FontSize="13" VerticalOptions="Center" HorizontalOptions="Start"
+                                           Grid.Row="1" Grid.Column="3"/>
+                                    <Label Text="{Binding FlowerDate}" LineBreakMode="NoWrap" FontSize="13" 
+                                           VerticalOptions="Center" HorizontalOptions="Start"
+                                           Grid.Row="1" Grid.Column="4" />
+
+                                    <Label Text="高度" FontSize="13" VerticalOptions="Center" HorizontalOptions="Start"
+                                           Grid.Row="1" Grid.Column="5"/>
+                                    <Label Text="{Binding PlantHeight}" LineBreakMode="NoWrap" FontSize="13" 
+                                           VerticalOptions="Center" HorizontalOptions="Start"
+                                           Grid.Row="1" Grid.Column="6" />
+                                </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
