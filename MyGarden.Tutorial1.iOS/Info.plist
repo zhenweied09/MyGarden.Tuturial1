@@ -34,5 +34,11 @@
 	<string>MyGarden.Tutorial1</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app needs to access to photos.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This app needs to access to the photo gallery.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This app needs to access to the camera to take photos.</string>
 </dict>
 </plist>

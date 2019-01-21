@@ -114,7 +114,7 @@ namespace MyGarden.Tutorial1.ViewModels
                     var imageSource = await App.PlantService.GetImageAsync(plant.PlantPhotos[0].Path);
                     plant.DisplayPhoto = imageSource;
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     plant.DisplayPhoto = ImageSource.FromResource("MyGarden.Tutorial1.Resources.Photos.sample-flower.jpeg");
                 }

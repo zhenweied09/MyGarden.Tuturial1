@@ -18,7 +18,7 @@ namespace MyGarden.Tutorial1.Views
 
         async void OnAddPlantClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SavePlantPage());
+            await Navigation.PushAsync(new SavePlantPage(new SavePlantViewModel()));
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)

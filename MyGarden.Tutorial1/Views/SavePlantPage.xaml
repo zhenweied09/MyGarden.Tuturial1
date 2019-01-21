@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="MyGarden.Tutorial1.Views.SavePlantPage">
+             x:Class="MyGarden.Tutorial1.Views.SavePlantPage" >
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="保存" Clicked="OnSaveClicked" />
+        <ToolbarItem Text="保存" Clicked="OnSavePlant"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <ScrollView>

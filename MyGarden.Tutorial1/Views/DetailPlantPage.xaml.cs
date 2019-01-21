@@ -16,8 +16,8 @@ namespace MyGarden.Tutorial1.Views
         }
 
         async void OnModifyPlantClicked(object sender, EventArgs args)
-        {
-            await Navigation.PushAsync(new SavePlantPage(_viewModel.Plant));
+        { 
+            await Navigation.PushAsync(new SavePlantPage(new SavePlantViewModel(_viewModel.Plant)));
         }
     }
 }
